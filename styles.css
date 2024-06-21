@@ -1,0 +1,102 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e9ebee;
+}
+
+#chat-container {
+    width: 360px;
+    height: 600px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+#chat-box {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#user-input {
+    flex-shrink: 0;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 18px;
+    outline: none;
+    width: calc(100% - 48px);
+}
+
+button {
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    width: 60px;
+    height: 30px;
+    background-color: #0078FF; /* Blue background */
+    background-image: linear-gradient(145deg, #0068D6, #0088FF); /* Gradient effect */
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Shadow for 3D effect */
+    transition: background-color 0.3s, box-shadow 0.2s, transform 0.2s; /* Smooth transitions for interaction */
+}
+
+button:hover {
+    background-color: #0056B3;
+    background-image: linear-gradient(145deg, #0048A6, #0068D6); /* Darker gradient on hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Larger shadow on hover */
+    transform: translateY(-2px); /* Slight raise effect on hover */
+}
+
+button:active {
+    background-color: #0048A6;
+    background-image: linear-gradient(145deg, #0038A6, #0056B3); /* Even darker on click */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Smaller shadow when pressed */
+    transform: translateY(0); /* Reset position when pressed */
+}
+
+
+.user, .bot {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 18px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.user {
+    background-color: #0078FF;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #f1f0f0;
+    color: black;
+    align-self: flex-start;
+}
+
+input:focus, button:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: #ccc;
+}
